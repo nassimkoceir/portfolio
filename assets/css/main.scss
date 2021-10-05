@@ -1,0 +1,213 @@
+/* BASE COLORS */
+$white: #fff;
+$cyan: #2696d7;
+$blue: #293b8b;
+$red: #c83c31;
+$green: #00af65;
+$yellow: #ee9e33;
+$violet: #963fa9;
+
+/* SCSS */
+
+body {
+	min-height: 100vmin;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	background-image: url('http://nassimkoceir.be/images/header.jpg');
+	font-family: 'Quicksand', sans-serif;
+}
+
+a, i {
+	transition: all 0.15s ease-in-out;
+}
+
+#top-navigation {
+	ul {
+		padding: 0;
+		margin: 0;
+
+		li {
+			list-style: none;
+
+			a {
+				font-size: 3em;
+				color: #000;
+
+				width: 100%;
+				height: 100%;
+			}
+
+			a:hover {
+				color: #333;
+			}
+		}
+	}
+}
+
+#left-panel {
+	width: 450px;
+	height: 100%;
+	position: fixed;
+	z-index: 1;
+	top: 0;
+	left: -450px;
+	transition: 0.5s;
+	overflow-x: hidden;
+
+	background: rgba(255,255,255,.05);
+	backdrop-filter: blur(15px);
+
+	#nav-closing {
+		width: 100%;
+		margin: 0;
+
+		a {
+			width: 100%;
+			height: 100%;
+			display: block;
+			padding: 10px;
+			text-align: right;
+			color: $red;
+			text-decoration: none;
+			font-size: 1.5em;
+
+			i {
+				width: 1.25em;
+				height: 1.25em;
+				background: #fff;
+				border-radius: 50% 50%;
+				display: inline-block;
+				vertical-align: -.34em;
+				margin-left: .5em;
+				color: $red;
+			}
+
+			i::before {
+				display: inline-block;
+				font-size: 1.5em;
+				transform: translate(-7%, -7%);
+			}
+		}
+
+		a:hover {
+			background: $red;
+			color: $white;
+
+			i {
+				background: $red;
+				color: $white;
+			}
+		}
+
+	}
+
+	ul {
+		padding: 0;
+		margin: 0;
+
+		li {
+			list-style: none;
+			width: 100%;
+			margin: 0;
+		}
+
+		a {
+			width: 100%;
+			height: 100%;
+			padding: 10px .75em;
+			font-size: 2.75em;
+			color: #fff;
+			display: inline-block;
+
+			i {
+				width: 1.25em;
+				height: 1.25em;
+				background: #fff;
+				border-radius: 50% 50%;
+				display: inline-block;
+				vertical-align: -.25em;
+				margin-right: .5em;
+			}
+
+			i::before {
+				position: absolute;
+				display: inline-block;
+				font-size: 0.7em;
+				transform: translate(37.5%, 37.5%);
+			}
+		}
+
+		#nav-about {
+			background: $cyan;
+
+			i {
+				color: $cyan;
+			}
+		}
+
+		#nav-about:hover {
+			background: $white;
+			color: $cyan;
+
+			i {
+				background: $cyan;
+				color: $white;
+			}
+		}
+
+		#nav-skills {
+			background: $blue;
+
+			i {
+				color: $blue;
+			}
+		}
+
+		#nav-skills:hover {
+			background: $white;
+			color: $blue;
+
+			i {
+				background: $blue;
+				color: $white;
+			}
+		}
+
+		#nav-projects {
+			background: $green;
+
+			i {
+				color: $green;
+			}
+		}
+
+		#nav-projects:hover {
+			background: $white;
+			color: $green;
+
+			i {
+				background: $green;
+				color: $white;
+			}
+		}
+
+		#nav-contact {
+			background: $yellow;
+
+			i {
+				color: $yellow;
+			}
+		}
+
+		#nav-contact:hover {
+			background: $white;
+			color: $yellow;
+
+			i {
+				background: $yellow;
+				color: $white;
+			}
+		}
+	}
+}
