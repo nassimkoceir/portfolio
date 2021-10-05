@@ -46,7 +46,8 @@ a, i {
 }
 
 #left-panel {
-	width: 450px;
+	width: 100%;
+	max-width: 450px;
 	height: 100%;
 	position: fixed;
 	z-index: 1;
