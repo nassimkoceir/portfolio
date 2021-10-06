@@ -35,7 +35,8 @@ a, i {
   transition: 0.5s;
   overflow-x: hidden;
   background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(15px); }
+  backdrop-filter: blur(15px);
+  box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.15); }
   #left-panel #nav-closing {
     width: 100%;
     margin: 0; }
