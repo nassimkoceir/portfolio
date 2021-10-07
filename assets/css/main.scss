@@ -30,6 +30,8 @@ a, i {
 }
 
 #top-navigation {
+	position: sticky;
+
 	ul {
 		padding: 0;
 		margin: 0;
@@ -63,8 +65,7 @@ a, i {
 	transition: 0.5s;
 	overflow-x: hidden;
 
-	background: rgba(255,255,255,.05);
-	backdrop-filter: blur(15px);
+	background: linear-gradient(315deg, rgba(255,255,255,.05) 0%, rgba(255,255,255,0) 100%), rgba(255,255,255,.05);
 	-webkit-backdrop-filter: blur(15px);
 	box-shadow: 0 0 10px 10px rgba(0,0,0,.15);
 
@@ -305,4 +306,18 @@ a, i {
 			white-space: normal;
 	    }
 	}
+}
+
+@supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
+  #left-panel {
+    -webkit-backdrop-filter: blur(15px);
+    backdrop-filter: blur(15px);
+  }
+}
+
+/* slightly transparent fallback for Firefox (not supporting backdrop-filter) */
+@supports not ((-webkit-backdrop-filter: none) or (backdrop-filter: none)) {
+  #left-panel {
+    background-color: rgba(255, 255, 255, .8);
+  }
 }
