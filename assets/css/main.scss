@@ -20,8 +20,9 @@ body {
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
-	background-image: url('../img/bg/header.jpg');
+	background-image: url('../img/bg/grass.jpg');
 	font-family: 'Quicksand', sans-serif;
+	overflow-x: hidden;
 }
 
 a, i {
@@ -221,6 +222,49 @@ a, i {
 	}
 }
 
+/* TYPEWRITING */
+.typewriter {
+	display: block;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.animated-text {
+    display: block;
+  	overflow: hidden;
+ 	animation: typing 2s;
+    font-weight: 700;
+    box-sizing: border-box;
+	white-space: normal;
+	color : $white;
+}
+
+#firstname {
+	font-size: 5rem;
+	animation: typing 2s;
+}
+
+#about-me {
+	font-size: 2.5rem;
+	animation: typing 3s;
+}
+
+
+/* ANIMATIONS */
+@keyframes typing {
+    from {
+		opacity: 0;
+        width: 0%;
+    }
+	50% {
+		opacity: 1;
+	}
+    to {
+        width: 100%;
+    }
+}
 
 /* RESPONSIVE */
 @media (min-width: 992px) {
@@ -234,5 +278,31 @@ a, i {
 		#nav-closing {
 			display: none;
 		}
+	}
+
+	#home {
+		width: calc(100% - 450px);
+		height: 100%;
+		position: absolute;
+		right: 0;
+	}
+
+	@keyframes typing {
+	    from {
+			opacity: 0;
+	        width: 0%;
+			white-space: nowrap;
+	    }
+		50% {
+			opacity: 1;
+		}
+		99% {
+			width: 101%;
+			white-space: nowrap;
+		}
+	    to {
+	        width: 100%;
+			white-space: normal;
+	    }
 	}
 }
