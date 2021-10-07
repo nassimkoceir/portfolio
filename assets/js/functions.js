@@ -8,7 +8,7 @@ function openNav() {
 function closeNav() {
   document.getElementById("left-panel").style.left = "-450px";
   document.getElementById("left-panel").style.overflowX = "hidden";
-  document.getElementById("top-navigation").style.opacity = "0";
+  document.getElementById("top-navigation").style.opacity = "1";
 }
 
 
