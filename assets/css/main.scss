@@ -318,6 +318,12 @@ a, i {
 /* slightly transparent fallback for Firefox (not supporting backdrop-filter) */
 @supports not ((-webkit-backdrop-filter: none) or (backdrop-filter: none)) {
   #left-panel {
-    background-color: rgba(255, 255, 255, .8);
+    background-color: rgba(255,255,255,.75);
+  }
+
+  @media (min-width: 992px) {
+	  #left-panel {
+	    background-color: rgba(255,255,255,.375);
+	  }
   }
 }
