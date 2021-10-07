@@ -1,3 +1,4 @@
+/* OPEN OR CLOSE THE MENU */
 function openNav() {
   document.getElementById("left-panel").style.left = "0";
   document.getElementById("left-panel").style.overflowX = "visible";
@@ -6,4 +7,16 @@ function openNav() {
 function closeNav() {
   document.getElementById("left-panel").style.left = "-450px";
   document.getElementById("left-panel").style.overflowX = "hidden";
+}
+
+
+/* DETECT WINDOW RESIZING WHEN TEST THE RESPONSIVENESS ;) */
+window.addEventListener('resize', windowSize);
+
+function windowSize() {
+  if(window.innerWidth >= 992){
+	  openNav();
+  } else {
+	  closeNav();
+  }
 }
