@@ -1,6 +1,11 @@
 /* BASE COLORS */
 /* SCSS */
+html {
+  height: 100%;
+  min-height: 100vmin; }
+
 body {
+  height: 100%;
   min-height: 100vmin;
   background-repeat: no-repeat;
   background-position: center;
@@ -136,5 +141,15 @@ a, i {
       #left-panel ul #nav-contact:hover i {
         background: #ee9e33;
         color: #fff; }
+
+/* RESPONSIVE */
+@media (min-width: 992px) {
+  #top-navigation {
+    display: none; }
+
+  #left-panel {
+    left: 0; }
+    #left-panel #nav-closing {
+      display: none; } }
 
 /*# sourceMappingURL=main.css.map */
